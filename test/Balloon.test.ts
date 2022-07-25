@@ -1,8 +1,8 @@
+import * as Consts from "../src/Consts";
 import { Balloon } from "../src/Balloon";
-import { COLORS } from "../src/Consts";
 import { BalloonStates } from "../src/BalloonStates";
 
-const color = COLORS[0];
+const color = Consts.COLORS[0];
 const size = 1;
 const state = BalloonStates.empty;
 
@@ -26,7 +26,11 @@ test(`balloon.fill should change state from empty to filled`, () => {
 });
 
 test(`balloon.fill on a full balloon should throw`, () => {
-  expect(balloon.fill()).toThrow();
+  function fillBalloon() {
+    balloon.fill();
+  }
+
+  expect(fillBalloon).toThrowError(Consts.ERROR_ALREADY_FULL);
 });
 
 test(`ballloon.pop should change state to popped`, () => {
@@ -35,5 +39,9 @@ test(`ballloon.pop should change state to popped`, () => {
 });
 
 test(`balloon.pop on a popped balloon should throw`, () => {
-  expect(balloon.pop()).toThrow();
+  function popBalloon() {
+    balloon.pop();
+  }
+
+  expect(popBalloon).toThrow(Consts.ERROR_ALREADY_POPPED);
 });

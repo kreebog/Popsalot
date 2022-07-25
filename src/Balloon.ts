@@ -1,4 +1,5 @@
 import { BalloonStates } from "./BalloonStates"; //
+import * as Consts from "./Consts";
 
 export class Balloon {
   size: number;
@@ -18,9 +19,9 @@ export class Balloon {
   fill() {
     switch (this.state) {
       case BalloonStates.full:
-        throw Error(`I can't be filled because I'm' already full.`);
+        throw Error(Consts.ERROR_ALREADY_FULL);
       case BalloonStates.popped:
-        throw Error(`I can't be filled because I'm popped.`);
+        throw Error(Consts.ERROR_POPPED_CANT_FILL);
       case BalloonStates.empty: {
         this.state = BalloonStates.full;
       }
@@ -30,9 +31,9 @@ export class Balloon {
   pop() {
     switch (this.state) {
       case BalloonStates.popped:
-        throw Error(`I've already been popped and can't be popped again.`);
+        throw Error(Consts.ERROR_ALREADY_POPPED);
       case BalloonStates.empty:
-        throw Error(`I'm empty and must be filled before I can be popped.`);
+        throw Error(Consts.ERROR_EMPTY_CANT_POP);
       case BalloonStates.full:
         this.state = BalloonStates.popped;
         return;
