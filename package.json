@@ -2,9 +2,11 @@
   "name": "popsalot",
   "version": "1.0.0",
   "description": "Cloud / K8s based demo game in which players pop balloons floating up the screen.",
-  "main": "index.js",
+  "main": "./bin/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -p .",
+    "start": "npm run build -- -w",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -17,9 +19,11 @@
   },
   "homepage": "https://github.com/kreebog/Popsalot#readme",
   "devDependencies": {
+    "@types/jest": "^28.1.6",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "@typescript-eslint/parser": "^5.30.7",
     "eslint": "^8.20.0",
-    "eslint-plugin-react": "^7.30.1"
+    "eslint-plugin-react": "^7.30.1",
+    "ts-jest": "^28.0.7"
   }
 }
