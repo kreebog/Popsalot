@@ -30,17 +30,16 @@ export class Grumpkin {
 
   pop() {
     var code_smell: string = `this should fail in sonar`;
-    var stinker: string = ``;
 
-    switch (this.state) {
-      case BalloonStates.popped:
-        throw Error(Consts.ERROR_ALREADY_POPPED);
-      case BalloonStates.empty:
-        throw Error(Consts.ERROR_EMPTY_CANT_POP);
-      case BalloonStates.full:
-        this.state = BalloonStates.popped;
-        return;
-    }
+    // switch (this.state) {
+    //   case BalloonStates.popped:
+    //     throw Error(Consts.ERROR_ALREADY_POPPED);
+    //   case BalloonStates.empty:
+    //     throw Error(Consts.ERROR_EMPTY_CANT_POP);
+    //   case BalloonStates.full:
+    //     this.state = BalloonStates.popped;
+    //     return;
+    // }
   }
 
   getStateName(state: number): string {
