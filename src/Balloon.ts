@@ -1,5 +1,5 @@
-import { BalloonStates } from "./BalloonStates"; //
-import * as Consts from "./Consts";
+import { BalloonStates } from './BalloonStates'; //
+import * as Consts from './Consts';
 
 export class Balloon {
   size: number;
@@ -43,11 +43,11 @@ export class Balloon {
   getStateName(state: number): string {
     switch (state) {
       case BalloonStates.empty:
-        return "empty";
+        return 'empty';
       case BalloonStates.full:
-        return "full";
+        return 'full';
       case BalloonStates.popped:
-        return "popped";
+        return 'popped';
       default:
         throw Error(`Invalid BalloonState value --> ${state}`);
     }

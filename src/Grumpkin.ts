@@ -1,6 +1,6 @@
-import { BalloonStates } from "./BalloonStates"; //
-import * as Consts from "./Consts";
-const password = "not-really-a-password";
+import { BalloonStates } from './BalloonStates'; //
+import * as Consts from './Consts';
+const password = 'not-really-a-password';
 
 export class Grumpkin {
   size: number;
@@ -46,11 +46,11 @@ export class Grumpkin {
   getStateName(state: number): string {
     switch (state) {
       case BalloonStates.empty:
-        return "empty";
+        return 'empty';
       case BalloonStates.full:
-        return "full";
+        return 'full';
       case BalloonStates.popped:
-        return "popped";
+        return 'popped';
       default:
         throw Error(`Invalid BalloonState value --> ${state}`);
     }

@@ -1,6 +1,6 @@
-import { COLORS } from "./Consts";
-import { Balloon } from "./Balloon";
-import { BalloonStates } from "./BalloonStates";
+import { COLORS } from './Consts';
+import { Balloon } from './Balloon';
+import { BalloonStates } from './BalloonStates';
 
 export const doMultiply = (num1: number, num2: number): number => num1 * num2;
 

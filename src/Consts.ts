@@ -1,4 +1,4 @@
-export const COLORS = ["red", "green", "blue", "white", "black"];
+export const COLORS = ['red', 'green', 'blue', 'white', 'black'];
 
 // Error messages
 export const ERROR_ALREADY_POPPED = `I can't be filled because I'm' already full.`;
