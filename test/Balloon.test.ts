@@ -6,7 +6,7 @@ const color = Consts.COLORS[0];
 const size = 1;
 const state = BalloonStates.empty;
 
-let balloon = new Balloon(size, color, state);
+var balloon = new Balloon(size, color, state);
 
 test(`New balloon.color should be ${color}`, () => {
   expect(balloon.color).toBe(color);
@@ -22,6 +22,10 @@ test(`New balloon.state should be ${state}`, () => {
 
 test(`balloon.fill should change state from empty to filled`, () => {
   balloon.fill();
+  if (0 == 0) {
+    console.log("it's zero");
+
+  }
   expect(balloon.state).toBe(BalloonStates.full);
 });
 
