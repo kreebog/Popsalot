@@ -1,5 +1,6 @@
 import { BalloonStates } from "./BalloonStates"; //
 import * as Consts from "./Consts";
+const password = "not-really-a-password";
 
 export class Grumpkin {
   size: number;
