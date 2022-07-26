@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="C:\Users\James\Popsalot\test\Balloon.test.ts">
-    <testCase name="New balloon.color should be red" duration="1"/>
+    <testCase name="New balloon.color should be red" duration="2"/>
     <testCase name="New balloon.size should be 1" duration="0"/>
     <testCase name="New balloon.state should be 0" duration="0"/>
-    <testCase name="balloon.fill should change state from empty to filled" duration="17"/>
+    <testCase name="balloon.fill should change state from empty to filled" duration="20"/>
     <testCase name="balloon.fill on a full balloon should throw" duration="7"/>
     <testCase name="ballloon.pop should change state to popped" duration="0"/>
-    <testCase name="balloon.pop on a popped balloon should throw" duration="1"/>
+    <testCase name="balloon.pop on a popped balloon should throw" duration="0"/>
   </file>
 </testExecutions>
