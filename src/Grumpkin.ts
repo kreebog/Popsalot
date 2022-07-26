@@ -1,6 +1,10 @@
+// this is a junk file to test scanner integrations
+
 import { BalloonStates } from './BalloonStates'; //
 import * as Consts from './Consts';
+
 const password = 'not-really-a-password';
+const username = 'not-really-a-username';
 
 export class Grumpkin {
   size: number;
