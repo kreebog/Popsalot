@@ -21,6 +21,10 @@ test(`New balloon.state should be ${state}`, () => {
   expect(balloon.state).toBe(state);
 });
 
+test(`New balloon.state name should be ${balloon.getStateName(BalloonStates.empty)}`, () => {
+  expect(balloon.getStateName(balloon.state)).toBe(balloon.getStateName(BalloonStates.empty));
+});
+
 test(`Balloon.describe should be ${description}`, () => {
   expect(balloon.describe()).toBe(description);
 })
@@ -41,6 +45,10 @@ test(`balloon.fill should change state from empty to filled`, () => {
   expect(balloon.state).toBe(BalloonStates.full);
 });
 
+test(`New balloon.state name should be ${balloon.getStateName(BalloonStates.full)}`, () => {
+  expect(balloon.getStateName(balloon.state)).toBe(balloon.getStateName(BalloonStates.full));
+});
+
 test(`balloon.fill on a full balloon should throw`, () => {
   function fillBalloon() {
     balloon.fill();
@@ -52,6 +60,10 @@ test(`balloon.fill on a full balloon should throw`, () => {
 test(`ballloon.pop should change state to popped`, () => {
   balloon.pop();
   expect(balloon.state).toBe(BalloonStates.popped);
+});
+
+test(`New balloon.state name should be ${balloon.getStateName(BalloonStates.popped)}`, () => {
+  expect(balloon.getStateName(balloon.state)).toBe(balloon.getStateName(BalloonStates.popped));
 });
 
 test(`balloon.pop on a popped balloon should throw`, () => {
