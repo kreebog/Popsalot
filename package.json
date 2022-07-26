@@ -21,7 +21,6 @@
   "homepage": "https://github.com/kreebog/Popsalot#readme",
   "devDependencies": {
     "@types/jest": "^28.1.6",
-    "jest-sonar-reporter": "^2.0.0",
     "ts-jest": "^28.0.7",
     "ts-standard": "^11.0.0"
   },

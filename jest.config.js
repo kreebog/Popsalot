@@ -2,5 +2,5 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  testResultsProcessor: 'jest-sonar-reporter'
+  coverageReporters: ['lcov', 'text']
 };
