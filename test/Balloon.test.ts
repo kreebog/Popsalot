@@ -24,7 +24,6 @@ test(`balloon.fill should change state from empty to filled`, () => {
   balloon.fill();
   if (0 == 0) {
     console.log("it's zero");
-
   }
   expect(balloon.state).toBe(BalloonStates.full);
 });
