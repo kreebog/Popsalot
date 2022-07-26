@@ -5,6 +5,7 @@ import { BalloonStates } from '../src/BalloonStates';
 const color = Consts.COLORS[0];
 const size = 1;
 const state = BalloonStates.empty;
+const description = 'I am a red ballon that is empty and I am 1 inches in diameter.';
 
 var balloon = new Balloon(size, color, state);
 
@@ -18,6 +19,18 @@ test(`New balloon.size should be ${size}`, () => {
 
 test(`New balloon.state should be ${state}`, () => {
   expect(balloon.state).toBe(state);
+});
+
+test(`Balloon.describe should be ${description}`, () => {
+  expect(balloon.describe()).toBe(description);
+})
+
+test(`balloon.pop on an empty balloon should throw`, () => {
+  function popBalloon() {
+    balloon.pop();
+  }
+
+  expect(popBalloon).toThrowError(Consts.ERROR_EMPTY_CANT_POP);
 });
 
 test(`balloon.fill should change state from empty to filled`, () => {
@@ -47,4 +60,12 @@ test(`balloon.pop on a popped balloon should throw`, () => {
   }
 
   expect(popBalloon).toThrow(Consts.ERROR_ALREADY_POPPED);
+});
+
+test(`balloon.fill on a popped balloon should throw`, () => {
+  function fillBalloon() {
+    balloon.fill();
+  }
+
+  expect(fillBalloon).toThrow(Consts.ERROR_POPPED_CANT_FILL);
 });

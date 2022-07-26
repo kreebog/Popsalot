@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">61.9% </span>
+                <span class="strong">85.71% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>13/21</span>
+                <span class='fraction'>18/21</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">40% </span>
+                <span class="strong">70% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/10</span>
+                <span class='fraction'>7/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">61.9% </span>
+                <span class="strong">85.71% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>13/21</span>
+                <span class='fraction'>18/21</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -133,37 +133,37 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -187,16 +187,16 @@ export class Balloon {
     this.state = state;
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  describe(</span>) {
-<span class="cstat-no" title="statement not covered" >    return `I am a ${this.color} ballon that is ${this.getStateName(this.state)} and I am ${this.size} inches in diameter.`;</span>
+  describe() {
+    return `I am a ${this.color} ballon that is ${this.getStateName(this.state)} and I am ${this.size} inches in diameter.`;
   }
 &nbsp;
   fill() {
     switch (this.state) {
       case BalloonStates.full:
         throw Error(Consts.ERROR_ALREADY_FULL);
-<span class="branch-1 cbranch-no" title="branch not covered" >      case BalloonStates.popped:</span>
-<span class="cstat-no" title="statement not covered" >        throw Error(Consts.ERROR_POPPED_CANT_FILL);</span>
+      case BalloonStates.popped:
+        throw Error(Consts.ERROR_POPPED_CANT_FILL);
       case BalloonStates.empty: {
         this.state = BalloonStates.full;
       }
@@ -207,23 +207,23 @@ export class Balloon {
     switch (this.state) {
       case BalloonStates.popped:
         throw Error(Consts.ERROR_ALREADY_POPPED);
-<span class="branch-1 cbranch-no" title="branch not covered" >      case BalloonStates.empty:</span>
-<span class="cstat-no" title="statement not covered" >        throw Error(Consts.ERROR_EMPTY_CANT_POP);</span>
+      case BalloonStates.empty:
+        throw Error(Consts.ERROR_EMPTY_CANT_POP);
       case BalloonStates.full:
         this.state = BalloonStates.popped;
         return;
     }
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  getStateName(</span>state: number): string {
-<span class="cstat-no" title="statement not covered" >    switch (state) {</span>
+  getStateName(state: number): string {
+    switch (state) {
       case BalloonStates.empty:
-<span class="cstat-no" title="statement not covered" >        return 'empty';</span>
-      case BalloonStates.full:
+        return 'empty';
+<span class="branch-1 cbranch-no" title="branch not covered" >      case BalloonStates.full:</span>
 <span class="cstat-no" title="statement not covered" >        return 'full';</span>
-      case BalloonStates.popped:
+<span class="branch-2 cbranch-no" title="branch not covered" >      case BalloonStates.popped:</span>
 <span class="cstat-no" title="statement not covered" >        return 'popped';</span>
-      default:
+<span class="branch-3 cbranch-no" title="branch not covered" >      default:</span>
 <span class="cstat-no" title="statement not covered" >        throw Error(`Invalid BalloonState value --&gt; ${state}`);</span>
     }
   }
@@ -235,7 +235,7 @@ export class Balloon {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-07-26T19:46:44.669Z
+                at 2022-07-26T21:35:05.408Z
             </div>
         <script src="prettify.js"></script>
         <script>
