@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 16.16.0
+      uses: actions/setup-node@v1
+      with:
+        node-version: '16.16.0'
+    - name: Install Modules ('npm install')
+      run: npm install
+    - name: Transpile Typescript (tsc)
+      run: tsc
+    - name: Execute Tests and Coverage ('npm run coverage')
+      run: npm run coverage
+    - name: Push Bin to dist (?) 
+      run: npm --version
