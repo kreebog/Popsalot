@@ -8,15 +8,27 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
     - name: Use Node.js 16.16.0
       uses: actions/setup-node@v1
       with:
         node-version: '16.16.0'
+    - name: Super-Linter
+      uses: github/super-linter@v3.17.0
+      env:
+        DEFAULT_BRANCH: main
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Install Modules ('npm install')
       run: npm install
-    - name: Transpile Typescript (tsc)
-      run: tsc --build --verbose
     - name: Execute Tests and Coverage ('npm run coverage')
       run: npm run coverage
-    - name: Push Bin to dist (?) 
+    - name: Transpile Typescript (tsc)
+      run: tsc --build --verbose
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    - name: Push Bin to dist branch (?) 
       run: ls ./dist
