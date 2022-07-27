@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc -p .",
     "start": "node ./dist/main.js",
-    "test": "jest",
+    "test": "jest ./test",
     "coverage": "npm test -- --coverage"
   },
   "repository": {
