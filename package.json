@@ -4,10 +4,11 @@
   "description": "Cloud / K8s based demo game in which players pop balloons floating up the screen.",
   "main": "./dist/src/main.js",
   "scripts": {
-    "build": "tsc -p .",
-    "start": "node ./dist/src/main.js",
-    "test": "jest ./test",
-    "coverage": "npm test -- --coverage"
+    "start": "node ./dist/main.js",
+    "test": "jest ./src",
+    "coverage": "npm test -- --coverage",
+    "build": "tsc",
+    "watch": "tsc -w"
   },
   "repository": {
     "type": "git",
