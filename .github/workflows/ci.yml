@@ -5,7 +5,7 @@ on:
   push:
 
 jobs:
-  lint:
+  Super-Linter:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
