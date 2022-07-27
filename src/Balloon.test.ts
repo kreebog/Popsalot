@@ -1,6 +1,6 @@
-import * as Consts from '../src/Consts'
-import { Balloon } from '../src/Balloon'
-import { BalloonStates } from '../src/BalloonStates'
+import * as Consts from './Consts'
+import { Balloon } from './Balloon'
+import { BalloonStates } from './BalloonStates'
 
 const color = Consts.COLORS[0]
 const size = 1

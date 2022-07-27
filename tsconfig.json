@@ -11,11 +11,10 @@
     "checkJs": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "newLine": "lf",
+    "newLine": "crlf",
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["src/**/*.test.ts"]
+  "include": ["src" ]
 }
