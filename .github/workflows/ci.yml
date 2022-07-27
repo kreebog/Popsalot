@@ -15,8 +15,8 @@ jobs:
     - name: Install Modules ('npm install')
       run: npm install
     - name: Transpile Typescript (tsc)
-      run: tsc
+      run: tsc --build --verbose
     - name: Execute Tests and Coverage ('npm run coverage')
       run: npm run coverage
     - name: Push Bin to dist (?) 
-      run: npm --version
+      run: ls ./dist

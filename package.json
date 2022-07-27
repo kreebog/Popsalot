@@ -2,10 +2,10 @@
   "name": "popsalot",
   "version": "1.0.0",
   "description": "Cloud / K8s based demo game in which players pop balloons floating up the screen.",
-  "main": "./bin/main.js",
+  "main": "./dist/main.js",
   "scripts": {
     "build": "tsc -p .",
-    "start": "npm run build -- -w",
+    "start": "node ./dist/main.js",
     "test": "jest",
     "coverage": "npm test -- --coverage"
   },
